@@ -1,0 +1,20 @@
+.header {
+  height: 80vh;
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-primary, 0.92) 0%,
+      rgba($color-primary, 0.92) 65%,
+      transparent 65%
+    ),
+    url(/img/hero-2.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  &__main {
+    width: 60%;
+    padding: 3rem 8rem;
+  }
+}

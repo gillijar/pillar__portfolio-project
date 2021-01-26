@@ -1,0 +1,45 @@
+// Basic button layout for entire page
+.btn {
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+// Primary button design
+.btn-primary {
+  background-color: $color-tertiary;
+  font-size: 1.75rem;
+  letter-spacing: 1.75px;
+  color: $color-white;
+  transition: all 0.3s;
+  outline: none;
+
+  // Primary button animations
+  &:hover {
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.25rem 5rem rgba($color-black, 0.25);
+  }
+
+  &:active {
+    transform: scale(1.02) translateY(-0.2rem);
+    box-shadow: 0 1.5rem 3.5rem rgba($color-black, 0.35);
+  }
+}
+
+// Tours Button
+.filler {
+  color: $color-white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.pricing {
+  color: $color-white;
+  font-size: 2rem;
+  font-style: italic;
+  margin-top: 0.8rem;
+  letter-spacing: 1.5px;
+  color: $color-secondary;
+}

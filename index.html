@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" type="img/png" href="/img/icon.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font family --Poppins-- -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pillar | Adventure awaits!</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" id="home">
+      <!-- Navigation logo -->
+      <img src="/img/logo.png" alt="Pillar logo" class="nav__logo" />
+      <!-- Navigation Links -->
+      <ul class="nav__links">
+        <a href="#information" class="nav__link">
+          <li>About Us</li>
+        </a>
+        <a href="#destinations" class="nav__link">
+          <li>Destinations</li>
+        </a>
+        <a href="#" class="nav__link">
+          <li>Testimonials</li>
+        </a>
+        <a href="#footer" class="nav__link">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header__main">
+        <h1 class="heading-primary">
+          Your <span class="highlight">adventure</span> starts now, <br />
+          let us do the hard work.
+        </h1>
+
+        <!-- Header button to get started -->
+        <button class="btn btn-primary u-margin-top-lg">Learn more</button>
+      </div>
+    </header>
+
+    <!-- Main content of page -->
+    <main>
+      <!-- Information section -->
+      <section class="info" id="information">
+        <!-- Information heading -->
+        <h2 class="heading-secondary">Why you should book with us</h2>
+        <!-- Information main content -->
+        <div class="info__about">
+          <!-- Figure 1 -->
+          <figure class="info__about-card">
+            <svg class="info__about-icon u-margin-bottom-sm">
+              <use xlink:href="img/sprite.svg#icon-globe"></use>
+            </svg>
+            <h3 class="heading-tertiary info__about-h3">
+              See the world like never before
+            </h3>
+            <p class="info__about-card--p">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              sequi pariatur in inventore.
+            </p>
+          </figure>
+          <!-- Figure 2 -->
+          <figure class="info__about-card">
+            <svg class="info__about-icon u-margin-bottom-sm">
+              <use xlink:href="img/sprite.svg#icon-map"></use>
+            </svg>
+            <h3 class="heading-tertiary info__about-h3">
+              Guided tours upon request
+            </h3>
+            <p class="info__about-card--p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
+              quas deleniti soluta a saepe asperiores.
+            </p>
+          </figure>
+          <!-- Figure 3 -->
+          <figure class="info__about-card">
+            <svg class="info__about-icon u-margin-bottom-sm">
+              <use xlink:href="img/sprite.svg#icon-credit"></use>
+            </svg>
+            <h3 class="heading-tertiary info__about-h3">Only $99 up front</h3>
+            <p class="info__about-card--p">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              sequi pariatur
+            </p>
+          </figure>
+          <!-- Figure 4 -->
+          <figure class="info__about-card">
+            <svg class="info__about-icon u-margin-bottom-sm">
+              <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <h3 class="heading-tertiary info__about-h3">
+              Your safety is our top priority
+            </h3>
+            <p class="info__about-card--p">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              sequi pariatur in inventore Lorem, ipsum.
+            </p>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Tours/Destinations -->
+      <section class="tours" id="destinations">
+        <!-- Tours/Destinations heading -->
+        <h2 class="heading-secondary">Our most popular trips</h2>
+        <!-- Top tours container -->
+        <div class="tours__container">
+          <!-- Tour 1 -->
+          <div class="tours__card">
+            <svg class="tours__icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <img src="/img/tour-1.jpeg" alt="tour 1" class="tours__card-img" />
+            <h3 class="heading-tertiary tours__heading">Desert Hike</h3>
+            <div class="tours__card-info">
+              <ul class="tours__list">
+                <li class="tours__list--item">3 day trip</li>
+                <li class="tours__list--item">Up to 6 people</li>
+                <li class="tours__list--item">Stay in a cozy hotel</li>
+                <li class="tours__list--item">Warm environment</li>
+                <li class="tours__list--item">Supplies provided</li>
+              </ul>
+            </div>
+            <button class="btn tours__btn">
+              <span class="filler">Starting at</span
+              ><span class="pricing">$1099.<sup>99</sup></span>
+            </button>
+          </div>
+          <!-- Tour 2 -->
+          <div class="tours__card">
+            <svg class="tours__icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <img src="/img/tour-2.jpeg" alt="tour 2" class="tours__card-img" />
+            <h3 class="heading-tertiary tours__heading">Mountain Dreamer</h3>
+            <div class="tours__card-info">
+              <ul class="tours__list">
+                <li class="tours__list--item">6 day trip</li>
+                <li class="tours__list--item">Up to 10 people</li>
+                <li class="tours__list--item">Tents and campsites</li>
+                <li class="tours__list--item">Comfortable environment</li>
+                <li class="tours__list--item">Supplies provided</li>
+              </ul>
+            </div>
+            <button class="btn tours__btn">
+              <span class="filler">Starting at</span
+              ><span class="pricing">$1499.<sup>99</sup></span>
+            </button>
+          </div>
+          <!-- Tour 3 -->
+          <div class="tours__card">
+            <svg class="tours__icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <img src="/img/tour-3.jpeg" alt="tour 3" class="tours__card-img" />
+            <h3 class="heading-tertiary tours__heading">Snowy Escape</h3>
+            <div class="tours__card-info">
+              <ul class="tours__list">
+                <li class="tours__list--item">4 day trip</li>
+                <li class="tours__list--item">Up to 4 people</li>
+                <li class="tours__list--item">Stay in a warm log cabin</li>
+                <li class="tours__list--item">Cold environment</li>
+                <li class="tours__list--item">Bring necessary items</li>
+              </ul>
+            </div>
+            <button class="btn tours__btn">
+              <span class="filler">Starting at</span
+              ><span class="pricing">$1999.<sup>99</sup></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- All destinations button -->
+        <button class="btn btn-primary">all destinations</button>
+      </section>
+
+      <!-- Story section -->
+      <section class="story">
+        <!-- Story heading -->
+        <h2 class="heading-secondary u-margin-bottom-md story__heading">
+          Our story.
+        </h2>
+
+        <!-- Story paragraph -->
+        <p class="story__paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          iste officiis laboriosam incidunt aliquid assumenda, in nesciunt esse
+          tenetur sed sit animi sapiente voluptate! Consequuntur inventore
+          dolorum iure eligendi nesciunt non commodi unde corrupti. Similique
+          voluptas repellat in omnis doloribus tempora nulla consequatur
+          necessitatibus dignissimos est hic vel voluptate ipsum animi laborum
+          corporis odio labore molestias, ab, atque, suscipit aspernatur dolorem
+          praesentium! Amet quibusdam quaerat, officiis cumque libero velit
+          maxime dolorum laudantium a sint esse soluta aspernatur facilis
+          corrupti voluptas adipisci saepe odio! Tempore debitis dolores velit
+          enim, exercitationem eius, earum tenetur aliquid itaque officia
+          voluptas quasi amet sed repellendus consequatur doloribus voluptatem
+          blanditiis temporibus, totam odit laudantium dolor hic repellat! Eos
+          illum exercitationem dignissimos, reiciendis veniam quo ab. Fugiat
+          aliquid eaque id praesentium molestias odit quasi illum itaque enim
+          expedita quidem inventore reprehenderit deleniti quos, ad at sunt
+          veniam voluptas. Reprehenderit, rerum modi. Quod, quas incidunt.
+          Omnis, officiis.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <!-- Footer navigation -->
+      <div class="footer__nav">
+        <ul class="nav__links">
+          <a href="#home" class="nav__link">
+            <li>Home</li>
+          </a>
+          <a href="#information" class="nav__link">
+            <li>About Us</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li>Our team</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li>Terms and Services</li>
+          </a>
+          <a href="#" class="nav__link">
+            <li>Book now</li>
+          </a>
+        </ul>
+      </div>
+
+      <!-- Contact area -->
+      <div class="footer__contact">
+        <div class="footer__address">
+          <svg class="footer__icon">
+            <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+          </svg>
+          555 Random St <br />
+          Suite 1A <br />
+          Columbus, OH, 43215 <br />
+          United States
+        </div>
+        <div class="footer__contact-personal">
+          <div class="footer__phone">
+            <svg class="footer__icon">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <p>(555)-111-1234</p>
+          </div>
+          <div class="footer__email">
+            <svg class="footer__icon">
+              <use xlink:href="img/sprite.svg#icon-email"></use>
+            </svg>
+            <p>pillarcorp@pillar.io</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__copyright">
+        Pillar 2021 &copy;. This is not a real website. It's current use is for
+        display on a portfolio.
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- See the world like never before -->
+<!-- Fully refundable trips with no charge fees -->
+<!-- Only $99 up front -->
+<!-- Your safety is our priority -->

@@ -1,0 +1,47 @@
+.footer {
+  background-color: $color-grey-dark-1;
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__contact {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    color: $color-grey-light-1;
+  }
+
+  &__nav {
+    display: inline-block;
+    width: 90%;
+    padding: $padding-footer;
+    border-bottom: 2px solid $color-grey-light-1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-secondary;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  &__phone,
+  &__email,
+  &__address {
+    display: flex;
+    padding: 0.8rem 0;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+    color: $color-grey-light-1;
+    letter-spacing: 0.8px;
+    padding: $padding-footer;
+  }
+}

@@ -1,0 +1,84 @@
+.tours {
+  padding: $padding-section;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    max-width: inherit;
+    padding: 8rem 3rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    box-shadow: $box-shadow-sm;
+
+    &-img {
+      height: 18rem;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: -1rem 0 1rem 0;
+
+    &--item {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+
+  &__heading {
+    position: relative;
+    padding: 1rem 0;
+    width: 70%;
+    margin: 0 auto;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-color: $color-secondary;
+      transform: skewX(-17deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-primary;
+    outline: none;
+  }
+}
+
+.like {
+  fill: #db4e44;
+  animation: tripLikeBtn 0.6s;
+}

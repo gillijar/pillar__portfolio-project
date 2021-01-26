@@ -1,0 +1,28 @@
+.story {
+  padding: $padding-section;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.7),
+      rgba($color-secondary, 0.7)
+    ),
+    url(/img/about-1.jpg);
+  background-size: cover;
+  background-position: bottom;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    color: $color-grey-light-1;
+    border-bottom: 2px solid $color-tertiary;
+    display: inline-block;
+    width: 50%;
+  }
+
+  &__paragraph {
+    line-height: 1.8;
+    font-size: 1.75rem;
+    font-weight: 300;
+    width: 75%;
+  }
+}

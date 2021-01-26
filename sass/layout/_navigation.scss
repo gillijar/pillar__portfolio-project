@@ -1,0 +1,47 @@
+.nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem 6rem;
+
+  &__logo {
+    width: 13%;
+    margin-right: auto;
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $color-primary;
+    font-weight: 300;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      margin-right: 4.5rem;
+    }
+
+    &::after {
+      content: '';
+      height: 0.2rem;
+      width: 100%;
+      background-color: $color-tertiary;
+      position: absolute;
+      transform: translateX(-101%);
+      transition: transform 0.3s;
+    }
+  }
+
+  &__link:hover {
+    &::after {
+      transform: translateX(0);
+    }
+  }
+}
