@@ -34,6 +34,9 @@
         <a href="#footer" class="nav__link">
           <li>Contact</li>
         </a>
+        <a href="#" class="nav__link book-now">
+          <li>Book Now</li>
+        </a>
       </ul>
     </nav>
 
@@ -208,11 +211,7 @@
           enim, exercitationem eius, earum tenetur aliquid itaque officia
           voluptas quasi amet sed repellendus consequatur doloribus voluptatem
           blanditiis temporibus, totam odit laudantium dolor hic repellat! Eos
-          illum exercitationem dignissimos, reiciendis veniam quo ab. Fugiat
-          aliquid eaque id praesentium molestias odit quasi illum itaque enim
-          expedita quidem inventore reprehenderit deleniti quos, ad at sunt
-          veniam voluptas. Reprehenderit, rerum modi. Quod, quas incidunt.
-          Omnis, officiis.
+          illum exercitationem dignissimos, reiciendis veniam quo ab.
         </p>
       </section>
     </main>
@@ -234,7 +233,7 @@
           <a href="#" class="nav__link">
             <li>Terms and Services</li>
           </a>
-          <a href="#" class="nav__link">
+          <a href="#" class="nav__link book-now">
             <li>Book now</li>
           </a>
         </ul>
@@ -273,6 +272,38 @@
         display on a portfolio.
       </div>
     </footer>
+
+    <!-- Book now modal -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <svg class="modal__close--btn">
+          <use xlink:href="img/sprite.svg#icon-cross"></use>
+        </svg>
+        <!-- Form for booking -->
+        <form action="#" class="modal__form">
+          <!-- Form heading -->
+          <h2 class="heading-secondary modal__form--heading">Get started</h2>
+          <!-- Form full name -->
+          <input
+            type="text"
+            class="modal__form--name modal__form--input"
+            placeholder="Full name"
+            required
+          />
+          <!-- Form email -->
+          <input
+            type="email"
+            class="modal__form--email modal__form--input"
+            placeholder="Email address"
+            required
+          />
+          <!-- Form button -->
+          <button class="btn btn-primary u-margin-top-md">Step 2 &rarr;</button>
+        </form>
+        <img src="/img/modal-bkg.jpeg" alt="modal img" class="modal__img" />
+      </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="app.js"></script>

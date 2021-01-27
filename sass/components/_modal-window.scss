@@ -1,0 +1,98 @@
+// Overlay
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+
+  &__overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color-black, 0.9);
+    z-index: -1;
+    position: relative;
+    backdrop-filter: blur(3px);
+  }
+
+  &__window {
+    width: 70%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+  }
+
+  &__close--btn {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  &__form {
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--input {
+      width: 75%;
+      padding: 0.5rem 1rem;
+      border: 1.5px solid $color-primary;
+      border-radius: 0.3rem;
+      outline: none;
+
+      &:focus {
+        border-bottom: 2px solid #53ad5b;
+
+        &:invalid {
+          border-bottom: 2px solid red;
+        }
+      }
+
+      &::placeholder {
+        font-size: 1.4rem;
+        font-style: italic;
+      }
+    }
+
+    &--name {
+      margin: 5rem 0 2rem 0;
+    }
+
+    &--heading {
+      color: $color-grey-dark-1;
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+  }
+}
+
+// Javascript class to open modal
+.open-modal {
+  opacity: 1;
+  pointer-events: all;
+}
