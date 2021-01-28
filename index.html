@@ -22,16 +22,16 @@
       <img src="/img/logo.png" alt="Pillar logo" class="nav__logo" />
       <!-- Navigation Links -->
       <ul class="nav__links">
-        <a href="#information" class="nav__link">
+        <a href="#information" class="nav__link nav__link-main">
           <li>About Us</li>
         </a>
-        <a href="#destinations" class="nav__link">
+        <a href="#destinations" class="nav__link nav__link-main">
           <li>Destinations</li>
         </a>
-        <a href="#" class="nav__link">
+        <a href="#testimonials" class="nav__link nav__link-main">
           <li>Testimonials</li>
         </a>
-        <a href="#footer" class="nav__link">
+        <a href="#footer" class="nav__link nav__link-main">
           <li>Contact</li>
         </a>
         <a href="#" class="nav__link book-now">
@@ -189,6 +189,10 @@
         <button class="btn btn-primary">all destinations</button>
       </section>
 
+      <section class="testimonials" id="testimonials">
+        <h2 class="heading-secondary">See what people are saying</h2>
+      </section>
+
       <!-- Story section -->
       <section class="story">
         <!-- Story heading -->
@@ -221,16 +225,16 @@
       <!-- Footer navigation -->
       <div class="footer__nav">
         <ul class="nav__links">
-          <a href="#home" class="nav__link">
+          <a href="#home" class="nav__link nav__link-main">
             <li>Home</li>
           </a>
-          <a href="#information" class="nav__link">
+          <a href="#information" class="nav__link nav__link-main">
             <li>About Us</li>
           </a>
-          <a href="#" class="nav__link">
+          <a href="#" class="nav__link nav__link-main">
             <li>Our team</li>
           </a>
-          <a href="#" class="nav__link">
+          <a href="#" class="nav__link nav__link-main">
             <li>Terms and Services</li>
           </a>
           <a href="#" class="nav__link book-now">
@@ -288,14 +292,12 @@
           <input
             type="text"
             class="modal__form--name modal__form--input"
-            placeholder="Full name"
             required
           />
           <!-- Form email -->
           <input
             type="email"
             class="modal__form--email modal__form--input"
-            placeholder="Email address"
             required
           />
           <!-- Form button -->
