@@ -18,16 +18,19 @@
   &__link:visited {
     font-size: 1.8rem;
     text-decoration: none;
-    color: $color-primary;
     font-weight: 300;
     position: relative;
     overflow: hidden;
-    padding: 1rem 0;
 
     &:not(:last-child) {
       margin-right: 4.5rem;
+      padding: 1rem 0;
+      color: $color-primary;
     }
+  }
 
+  // Underline for main links
+  &__link-main {
     &::after {
       content: '';
       height: 0.2rem;
@@ -40,8 +43,22 @@
   }
 
   &__link:hover {
-    &::after {
-      transform: translateX(0);
+    &:not(:last-child) {
+      &::after {
+        transform: translateX(0);
+      }
     }
+  }
+}
+
+.book-now {
+  padding: 1rem 2rem;
+  background-color: $color-tertiary;
+  color: $color-white;
+  transition: all 1s;
+  backface-visibility: hidden;
+
+  &:hover {
+    animation: btnHover 1s infinite;
   }
 }

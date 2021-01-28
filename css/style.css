@@ -15,6 +15,14 @@
   100% {
     transform: scale(1); } }
 
+@keyframes btnHover {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
 *,
 *::before,
 *::after {
@@ -177,9 +185,6 @@ body {
         border-bottom: 2px solid #53ad5b; }
         .modal__form--input:focus:invalid {
           border-bottom: 2px solid red; }
-      .modal__form--input::placeholder {
-        font-size: 1.4rem;
-        font-style: italic; }
     .modal__form--name {
       margin: 5rem 0 2rem 0; }
     .modal__form--heading {
@@ -291,23 +296,32 @@ body {
   .nav__link:link, .nav__link:visited {
     font-size: 1.8rem;
     text-decoration: none;
-    color: #829079;
     font-weight: 300;
     position: relative;
-    overflow: hidden;
-    padding: 1rem 0; }
+    overflow: hidden; }
     .nav__link:link:not(:last-child), .nav__link:visited:not(:last-child) {
-      margin-right: 4.5rem; }
-    .nav__link:link::after, .nav__link:visited::after {
-      content: '';
-      height: 0.2rem;
-      width: 100%;
-      background-color: #b9925e;
-      position: absolute;
-      transform: translateX(-101%);
-      transition: transform 0.3s; }
-  .nav__link:hover::after {
+      margin-right: 4.5rem;
+      padding: 1rem 0;
+      color: #829079; }
+  .nav__link-main::after {
+    content: '';
+    height: 0.2rem;
+    width: 100%;
+    background-color: #b9925e;
+    position: absolute;
+    transform: translateX(-101%);
+    transition: transform 0.3s; }
+  .nav__link:hover:not(:last-child)::after {
     transform: translateX(0); }
+
+.book-now {
+  padding: 1rem 2rem;
+  background-color: #b9925e;
+  color: #ebebeb;
+  transition: all 1s;
+  backface-visibility: hidden; }
+  .book-now:hover {
+    animation: btnHover 1s infinite; }
 
 .story {
   padding: 5rem 3rem;
@@ -346,7 +360,11 @@ body {
     flex-direction: column;
     align-items: stretch;
     position: relative;
+    transition: all 0.3s;
     box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25); }
+    .tours__card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 3rem 5rem rgba(31, 31, 31, 0.25); }
     .tours__card-img {
       height: 18rem;
       width: 100%;
