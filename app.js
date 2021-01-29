@@ -42,3 +42,47 @@ document.addEventListener('keydown', (e) => {
 openModalBtn.forEach((btn) => btn.addEventListener('click', openModal));
 closeModalBtn.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
+
+// Slider component
+const slides = document.querySelectorAll('.slider__slide');
+const btnRight = document.querySelector('.btn-right');
+const btnLeft = document.querySelector('.btn-left');
+
+// Initial slide position
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+
+let curSlide = 0;
+const maxSlide = slides.length - 1;
+
+// Slide transitions
+const goToSlide = function () {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
+  );
+};
+
+// Next Slide
+const nextSlide = function () {
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  goToSlide();
+};
+
+// Previous Slide
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  goToSlide();
+};
+
+// Event Listeners
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);

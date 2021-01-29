@@ -7,10 +7,15 @@
     <link rel="shortcut icon" type="img/png" href="/img/icon.png" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Font family --Poppins-- -->
+    <!-- Font family --Poppins-- / --Fraunces-- -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap"
       rel="stylesheet"
     />
     <title>Pillar | Adventure awaits!</title>
@@ -56,7 +61,7 @@
     <!-- Main content of page -->
     <main>
       <!-- Information section -->
-      <section class="info" id="information">
+      <section class="info section" id="information">
         <!-- Information heading -->
         <h2 class="heading-secondary">Why you should book with us</h2>
         <!-- Information main content -->
@@ -115,7 +120,7 @@
       </section>
 
       <!-- Tours/Destinations -->
-      <section class="tours" id="destinations">
+      <section class="tours section" id="destinations">
         <!-- Tours/Destinations heading -->
         <h2 class="heading-secondary">Our most popular trips</h2>
         <!-- Top tours container -->
@@ -179,8 +184,8 @@
               </ul>
             </div>
             <button class="btn tours__btn">
-              <span class="filler">Starting at</span
-              ><span class="pricing">$1999.<sup>99</sup></span>
+              <span class="pricing">$1999.<sup>99</sup></span>
+              <span class="filler">Starting at</span>
             </button>
           </div>
         </div>
@@ -189,12 +194,82 @@
         <button class="btn btn-primary">all destinations</button>
       </section>
 
-      <section class="testimonials" id="testimonials">
+      <!-- Testimonials -->
+      <section class="testimonials section" id="testimonials">
+        <!-- Testimonials heading -->
         <h2 class="heading-secondary">See what people are saying</h2>
+
+        <!-- Slider component -->
+        <div class="slider">
+          <div class="slider__slide">
+            <span class="slider__slide--quote">“</span>
+            <div class="slider__slide--paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              facilis fugit minima voluptas itaque non corporis dolorum, beatae
+              ipsam ex dignissimos enim quidem architecto?
+            </div>
+            <div class="slider__slide--info">
+              <img
+                src="img/avi-1.jpeg"
+                alt="Person 1"
+                class="slider__slide--img"
+              />
+              <div class="slider__slide--person">
+                <div class="slider__slide--name">Michael Smith</div>
+                <div class="slider__slide--member">Member since 2018</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__slide">
+            <span class="slider__slide--quote">“</span>
+            <div class="slider__slide--paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
+              sapiente odit optio repellat aperiam nam, enim deserunt ipsum ea
+              recusandae!
+            </div>
+            <div class="slider__slide--info">
+              <img
+                src="img/avi-2.jpeg"
+                alt="Person 2"
+                class="slider__slide--img"
+              />
+              <div class="slider__slide--person">
+                <div class="slider__slide--name">Ashley Henry</div>
+                <div class="slider__slide--member">Member since 2016</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__slide">
+            <span class="slider__slide--quote">“</span>
+            <div class="slider__slide--paragraph">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum,
+              dolorem perferendis maiores doloremque corrupti nulla, delectus
+              nisi, sapiente animi consequatur eius adipisci. Unde pariatur
+              similique tempore repudiandae temporibus commodi!
+            </div>
+            <div class="slider__slide--info">
+              <img
+                src="img/avi-3.jpeg"
+                alt="Person 3"
+                class="slider__slide--img"
+              />
+              <div class="slider__slide--person">
+                <div class="slider__slide--name">Chris Baker</div>
+                <div class="slider__slide--member">Member since 2020</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider buttons -->
+          <div class="slider__btn btn-right">&rarr;</div>
+          <div class="slider__btn btn-left">&larr;</div>
+        </div>
       </section>
 
       <!-- Story section -->
-      <section class="story">
+      <section class="story section">
         <!-- Story heading -->
         <h2 class="heading-secondary u-margin-bottom-md story__heading">
           Our story.
@@ -221,7 +296,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer section" id="footer">
       <!-- Footer navigation -->
       <div class="footer__nav">
         <ul class="nav__links">
@@ -292,12 +367,14 @@
           <input
             type="text"
             class="modal__form--name modal__form--input"
+            placeholder="Full name"
             required
           />
           <!-- Form email -->
           <input
             type="email"
             class="modal__form--email modal__form--input"
+            placeholder="Email address"
             required
           />
           <!-- Form button -->
@@ -312,7 +389,6 @@
   </body>
 </html>
 
-<!-- See the world like never before -->
-<!-- Fully refundable trips with no charge fees -->
-<!-- Only $99 up front -->
-<!-- Your safety is our priority -->
+<!-- 3. Make sections slide in when scrolled over with intersectionObserver -->
+<!-- 4. Revise code -->
+<!-- 5. Finish app -->

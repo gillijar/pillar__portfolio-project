@@ -127,9 +127,18 @@ body {
   color: #ebebeb;
   font-size: 2rem;
   font-style: italic;
-  margin-top: 0.8rem;
   letter-spacing: 1.5px;
   color: #ede6b9; }
+
+.btn-right {
+  top: 50%;
+  right: 10px;
+  transform: translate(-10px, -50%); }
+
+.btn-left {
+  top: 50%;
+  left: 10px;
+  transform: translate(10px, -50%); }
 
 .modal {
   height: 100vh;
@@ -198,6 +207,60 @@ body {
 .open-modal {
   opacity: 1;
   pointer-events: all; }
+
+.slider {
+  height: 30rem;
+  width: 70%;
+  margin-top: 6rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25);
+  border-radius: 3px; }
+  .slider__slide {
+    padding: 3rem 8rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    transition: all 0.75s; }
+    .slider__slide--quote {
+      position: absolute;
+      top: -1rem;
+      left: 5rem;
+      font-size: 10rem;
+      font-family: 'Fraunces', sans-serif;
+      color: #829079; }
+    .slider__slide--img {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 2rem;
+      border-radius: 100px;
+      object-fit: cover; }
+    .slider__slide--info {
+      display: flex;
+      align-items: center; }
+    .slider__slide--paragraph {
+      margin-left: 2rem;
+      font-size: 1.8rem; }
+    .slider__slide--name {
+      font-size: 1.6rem; }
+    .slider__slide--member {
+      font-size: 1.2rem;
+      color: #7b7d79; }
+  .slider__btn {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100px;
+    background-color: rgba(182, 186, 179, 0.75);
+    font-size: 2.5rem;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .footer {
   background-color: #3b3b3b;
@@ -342,6 +405,14 @@ body {
     font-weight: 300;
     width: 75%; }
 
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 3rem;
+  background-color: #fafafa; }
+
 .tours {
   padding: 5rem 3rem;
   display: flex;
@@ -351,7 +422,8 @@ body {
     max-width: inherit;
     padding: 8rem 3rem;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    overflow: hidden; }
   .tours__card {
     width: 25%;
     height: 100%;
