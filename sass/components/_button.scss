@@ -29,18 +29,45 @@
 }
 
 // Tours Button
-.filler {
-  color: $color-white;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.pricing {
-  color: $color-white;
+.tours__btn {
   font-size: 2rem;
-  font-style: italic;
-  letter-spacing: 1.5px;
-  color: $color-secondary;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  background-color: $color-primary;
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s;
+    outline: none;
+  }
+
+  &-visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &-invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+  }
+
+  &:hover &-visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &-invisible {
+    top: 0;
+  }
 }
 
 // Slider buttons

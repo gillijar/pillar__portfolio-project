@@ -118,17 +118,35 @@ body {
     transform: scale(1.02) translateY(-0.2rem);
     box-shadow: 0 1.5rem 3.5rem rgba(31, 31, 31, 0.35); }
 
-.filler {
-  color: #ebebeb;
-  font-size: 1.2rem;
-  text-transform: uppercase; }
-
-.pricing {
-  color: #ebebeb;
+.tours__btn {
   font-size: 2rem;
-  font-style: italic;
-  letter-spacing: 1.5px;
-  color: #ede6b9; }
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  background-color: #829079;
+  color: #ebebeb;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none; }
+  .tours__btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s;
+    outline: none; }
+  .tours__btn-visible {
+    padding: 2rem 7.5rem; }
+  .tours__btn-invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0; }
+  .tours__btn:hover .tours__btn-visible {
+    transform: translateY(100%); }
+  .tours__btn:hover .tours__btn-invisible {
+    top: 0; }
 
 .btn-right {
   top: 50%;
