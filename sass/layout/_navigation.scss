@@ -4,14 +4,38 @@
   align-items: center;
   padding: 1rem 6rem;
 
+  @include respond(tab-port) {
+    justify-content: center;
+  }
+
   &__logo {
     width: 13%;
     margin-right: auto;
+
+    @include respond(tab-port) {
+      width: 45%;
+      margin-right: 0;
+    }
   }
 
   &__links {
     display: flex;
     list-style: none;
+
+    @include respond(tab-port) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: $color-primary;
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15rem 5rem;
+      transform: translateX(100%);
+    }
   }
 
   &__link:link,
@@ -22,10 +46,19 @@
     position: relative;
     overflow: hidden;
 
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
+
     &:not(:last-child) {
       margin-right: 4.5rem;
       padding: 1rem 0;
       color: $color-primary;
+
+      @include respond(tab-port) {
+        color: $color-white;
+        margin-right: 0;
+      }
     }
   }
 

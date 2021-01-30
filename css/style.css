@@ -33,6 +33,15 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   max-width: 170rem;
@@ -40,7 +49,23 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    body {
+      max-width: 100vw; } }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      max-width: 100vw; } }
+
+.section {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: all 0.8s; }
+
+.appear {
+  opacity: 1;
+  transform: translateY(0); }
 
 .heading-primary {
   font-size: 3.6rem;
@@ -49,6 +74,9 @@ body {
   line-height: 1.3;
   animation: headerSlideIn 1s;
   transition: all 0.6s; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      text-align: center; } }
 
 .heading-secondary {
   text-transform: uppercase;
@@ -234,6 +262,9 @@ body {
   position: relative;
   box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25);
   border-radius: 3px; }
+  @media only screen and (max-width: 37.5em) {
+    .slider {
+      width: 100%; } }
   .slider__slide {
     padding: 3rem 8rem;
     height: 100%;
@@ -263,6 +294,10 @@ body {
     .slider__slide--paragraph {
       margin-left: 2rem;
       font-size: 1.8rem; }
+      @media only screen and (max-width: 37.5em) {
+        .slider__slide--paragraph {
+          font-size: 1.5rem;
+          margin-bottom: 3rem; } }
     .slider__slide--name {
       font-size: 1.6rem; }
     .slider__slide--member {
@@ -322,20 +357,39 @@ body {
   background-position: center;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      background-image: linear-gradient(to right, rgba(130, 144, 121, 0.92), rgba(130, 144, 121, 0.92)), url(/img/hero-2.jpg);
+      background-size: cover;
+      background-position: center; } }
   .header__main {
     width: 60%;
     padding: 3rem 8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__main {
+        width: 100%;
+        padding: 1.5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
 
 .info {
   margin: 0 auto;
   padding: 5rem 3rem;
   background-color: #fafafa; }
+  @media only screen and (max-width: 56.25em) {
+    .info {
+      padding: 5rem 3rem 2rem 3rem; } }
   .info__about {
     margin: 0 auto;
     max-width: 140rem;
     padding: 6rem 5rem;
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .info__about {
+        display: flex;
+        flex-direction: column; } }
     .info__about-card {
       padding: 4rem 1.5rem;
       width: 22%;
@@ -348,9 +402,17 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      @media only screen and (max-width: 56.25em) {
+        .info__about-card {
+          width: 100%; }
+          .info__about-card:not(:last-child) {
+            margin-bottom: 4rem; } }
       .info__about-card:hover {
         transform: scale(1.05);
         box-shadow: 0 3rem 5rem rgba(31, 31, 31, 0.25); }
+        @media only screen and (max-width: 56.25em) {
+          .info__about-card:hover {
+            transform: scale(1); } }
       .info__about-card:not(:last-child) {
         margin-right: 4rem; }
       .info__about-card--p {
@@ -368,22 +430,50 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .nav {
+      justify-content: center; } }
   .nav__logo {
     width: 13%;
     margin-right: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo {
+        width: 45%;
+        margin-right: 0; } }
   .nav__links {
     display: flex;
     list-style: none; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #829079;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15rem 5rem;
+        transform: translateX(100%); } }
   .nav__link:link, .nav__link:visited {
     font-size: 1.8rem;
     text-decoration: none;
     font-weight: 300;
     position: relative;
     overflow: hidden; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__link:link, .nav__link:visited {
+        font-size: 2.5rem; } }
     .nav__link:link:not(:last-child), .nav__link:visited:not(:last-child) {
       margin-right: 4.5rem;
       padding: 1rem 0;
       color: #829079; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__link:link:not(:last-child), .nav__link:visited:not(:last-child) {
+          color: #ebebeb;
+          margin-right: 0; } }
   .nav__link-main::after {
     content: '';
     height: 0.2rem;
@@ -442,6 +532,11 @@ body {
     display: flex;
     justify-content: space-around;
     overflow: hidden; }
+    @media only screen and (max-width: 56.25em) {
+      .tours__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
   .tours__card {
     width: 25%;
     height: 100%;
@@ -452,9 +547,17 @@ body {
     position: relative;
     transition: all 0.3s;
     box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25); }
+    @media only screen and (max-width: 56.25em) {
+      .tours__card {
+        width: 90%; }
+        .tours__card:not(:last-child) {
+          margin-bottom: 4rem; } }
     .tours__card:hover {
       transform: scale(1.05);
       box-shadow: 0 3rem 5rem rgba(31, 31, 31, 0.25); }
+      @media only screen and (max-width: 56.25em) {
+        .tours__card:hover {
+          transform: scale(1); } }
     .tours__card-img {
       height: 18rem;
       width: 100%;
@@ -464,6 +567,9 @@ body {
     margin: -1rem 0 1rem 0; }
     .tours__list--item {
       font-size: 1.4rem; }
+      @media only screen and (max-width: 56.25em) {
+        .tours__list--item {
+          line-height: 2; } }
   .tours__icon {
     height: 2rem;
     width: 2rem;
@@ -473,6 +579,10 @@ body {
     right: 1rem;
     cursor: pointer;
     transition: all 0.6s; }
+    @media only screen and (max-width: 56.25em) {
+      .tours__icon {
+        height: 2.5rem;
+        width: 2.5rem; } }
   .tours__heading {
     position: relative;
     padding: 1rem 0;
