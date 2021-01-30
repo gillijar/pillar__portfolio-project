@@ -17,7 +17,7 @@ const btnLeft = document.querySelector('.btn-left');
 headerBtn.addEventListener('click', function () {
   const headerBottom = document.querySelector('.header').getBoundingClientRect()
     .bottom;
-  window.scrollTo({ top: headerBottom });
+  window.scrollTo({ top: headerBottom, behavior: 'smooth' });
 });
 
 // Toggle like button on tours cards
