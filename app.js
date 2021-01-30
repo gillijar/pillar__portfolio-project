@@ -9,10 +9,15 @@ const closeModalBtn = document.querySelector('.modal__close--btn');
 const modalWindow = document.querySelector('.modal');
 const modalOverlay = document.querySelector('.modal__overlay');
 
+const slides = document.querySelectorAll('.slider__slide');
+const btnRight = document.querySelector('.btn-right');
+const btnLeft = document.querySelector('.btn-left');
+
 // Header button to scroll to main content
-const section1 = document.querySelector('.info');
 headerBtn.addEventListener('click', function () {
-  section1.scrollIntoView({ behavior: 'smooth' });
+  const headerBottom = document.querySelector('.header').getBoundingClientRect()
+    .bottom;
+  window.scrollTo({ top: headerBottom });
 });
 
 // Toggle like button on tours cards
@@ -43,11 +48,8 @@ openModalBtn.forEach((btn) => btn.addEventListener('click', openModal));
 closeModalBtn.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
 
+//////////////////////////////////
 // Slider component
-const slides = document.querySelectorAll('.slider__slide');
-const btnRight = document.querySelector('.btn-right');
-const btnLeft = document.querySelector('.btn-left');
-
 // Initial slide position
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
@@ -86,3 +88,24 @@ const prevSlide = function () {
 // Event Listeners
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
+
+//////////////////////////////////
+// Section smooth intro
+const sections = document.querySelectorAll('.section');
+
+const sectionSlideIn = function (entries, observer) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    entry.target.classList.add('appear');
+    observer.unobserve(entry.target);
+  }
+};
+
+const sectionObserver = new IntersectionObserver(sectionSlideIn, {
+  root: null,
+  threshold: 0.2,
+});
+
+sections.forEach((section) => {
+  sectionObserver.observe(section);
+});
