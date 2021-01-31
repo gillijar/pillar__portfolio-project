@@ -12,6 +12,10 @@
     justify-content: space-between;
     width: 40%;
     color: $color-grey-light-1;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__nav {
@@ -21,6 +25,10 @@
     border-bottom: 2px solid $color-grey-light-1;
     display: flex;
     justify-content: center;
+
+    @include respond(phone) {
+      width: 120%;
+    }
   }
 
   &__icon {
@@ -40,8 +48,16 @@
 
   &__copyright {
     font-size: 1.4rem;
-    color: $color-grey-light-1;
+    color: $color-grey-light-3;
     letter-spacing: 0.8px;
     padding: $padding-footer;
+
+    &-main {
+      color: $color-white;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 }

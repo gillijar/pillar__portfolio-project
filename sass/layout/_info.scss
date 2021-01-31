@@ -4,7 +4,7 @@
   background-color: $color-grey-light-1;
 
   @include respond(tab-port) {
-    padding: 5rem 3rem 2rem 3rem;
+    padding: 5rem 3rem 0 3rem;
   }
 
   &__about {
@@ -15,8 +15,13 @@
     justify-content: space-between;
 
     @include respond(tab-port) {
-      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 5rem;
+    }
+
+    @include respond(phone) {
       flex-direction: column;
+      align-items: center;
     }
 
     &-card {
@@ -34,6 +39,11 @@
       align-items: center;
 
       @include respond(tab-port) {
+        width: 48%;
+        margin-bottom: 4rem;
+      }
+
+      @include respond(phone) {
         width: 100%;
 
         &:not(:last-child) {
@@ -51,6 +61,10 @@
 
       &:not(:last-child) {
         margin-right: 4rem;
+
+        @include respond(tab-port) {
+          margin-right: 0;
+        }
       }
 
       &--p {

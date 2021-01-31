@@ -6,6 +6,41 @@
 
   @include respond(tab-port) {
     justify-content: center;
+    padding: 1rem 3rem;
+  }
+
+  &__phone-btn-container {
+    height: 3.2rem;
+  }
+
+  &__phone-btn {
+    display: none;
+
+    @include respond(tab-port) {
+      display: inline-block;
+      height: 0.3rem;
+      width: 4rem;
+      background-color: $color-tertiary;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform: translateY(-1.3rem);
+        background-color: $color-tertiary;
+      }
+
+      &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform: translateY(1.3rem);
+        background-color: $color-tertiary;
+      }
+    }
   }
 
   &__logo {
@@ -13,28 +48,55 @@
     margin-right: auto;
 
     @include respond(tab-port) {
+      width: 20%;
+      margin-right: auto;
+    }
+
+    @include respond(phone) {
       width: 45%;
-      margin-right: 0;
     }
   }
 
   &__links {
     display: flex;
     list-style: none;
+    transition: all 0.6s;
+    position: relative;
 
-    @include respond(tab-port) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      width: 100%;
-      background-color: $color-primary;
-      z-index: 1000;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15rem 5rem;
-      transform: translateX(100%);
+    &-close {
+      display: none;
+
+      @include respond(tab-port) {
+        display: inline-block;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        fill: $color-white;
+        height: 6.5rem;
+        width: 6.5rem;
+      }
+    }
+
+    &-top {
+      @include respond(tab-port) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $color-primary;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15rem 5rem;
+        transform: translateX(100%);
+      }
+    }
+    &-bottom {
+      @include respond(tab-port) {
+        display: none;
+      }
     }
   }
 
@@ -94,4 +156,9 @@
   &:hover {
     animation: btnHover 1s infinite;
   }
+}
+
+// Javascript class for navigation (mobile and tablet)
+.nav-open {
+  transform: translateX(0);
 }

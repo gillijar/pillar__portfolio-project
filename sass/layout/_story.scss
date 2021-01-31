@@ -17,6 +17,10 @@
     border-bottom: 2px solid $color-tertiary;
     display: inline-block;
     width: 50%;
+
+    @include respond(phone) {
+      width: 90%;
+    }
   }
 
   &__paragraph {

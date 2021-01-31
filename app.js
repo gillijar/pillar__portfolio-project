@@ -13,11 +13,17 @@ const slides = document.querySelectorAll('.slider__slide');
 const btnRight = document.querySelector('.btn-right');
 const btnLeft = document.querySelector('.btn-left');
 
+const sections = document.querySelectorAll('.section');
+
+const navBtn = document.querySelectorAll('.nav__btn');
+const navContainer = document.querySelector('.nav__links');
+const navLinks = document.querySelectorAll('.nav__link-main');
+
 // Header button to scroll to main content
 headerBtn.addEventListener('click', function () {
-  const headerBottom = document.querySelector('.header').getBoundingClientRect()
-    .bottom;
-  window.scrollTo({ top: headerBottom, behavior: 'smooth' });
+  const section1 = document.querySelector('.info');
+  section1.classList.remove('section-hidden');
+  section1.scrollIntoView({ behavior: 'smooth' });
 });
 
 // Toggle like button on tours cards
@@ -91,8 +97,6 @@ btnLeft.addEventListener('click', prevSlide);
 
 //////////////////////////////////
 // Section smooth intro
-const sections = document.querySelectorAll('.section');
-
 const sectionSlideIn = function (entries, observer) {
   const [entry] = entries;
   if (entry.isIntersecting) {
@@ -108,4 +112,23 @@ const sectionObserver = new IntersectionObserver(sectionSlideIn, {
 
 sections.forEach((section) => {
   sectionObserver.observe(section);
+});
+
+//////////////////////////////////
+// Open/close nav mobile and tablet
+navBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    navContainer.classList.toggle('nav-open');
+  });
+});
+
+// CLose nav when link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    // Remove hidden class from sections
+    sections.forEach((section) => {
+      section.classList.remove('section-hidden');
+    });
+    navContainer.classList.remove('nav-open');
+  });
 });

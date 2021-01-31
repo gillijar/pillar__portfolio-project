@@ -26,7 +26,11 @@
       <!-- Navigation logo -->
       <img src="/img/logo.png" alt="Pillar logo" class="nav__logo" />
       <!-- Navigation Links -->
-      <ul class="nav__links">
+      <ul class="nav__links nav__links-top">
+        <!-- Close nav btn -->
+        <svg class="nav__links-close nav__btn">
+          <use xlink:href="img/sprite.svg#icon-cross"></use>
+        </svg>
         <a href="#information" class="nav__link nav__link-main">
           <li>About Us</li>
         </a>
@@ -44,7 +48,9 @@
         </a>
       </ul>
       <!-- Smaller screen navigation button -->
-      <div class="nav__phone-btn"></div>
+      <div class="nav__phone-btn-container nav__btn">
+        <div class="nav__phone-btn"></div>
+      </div>
     </nav>
 
     <!-- Header -->
@@ -63,7 +69,7 @@
     <!-- Main content of page -->
     <main>
       <!-- Information section -->
-      <section class="info section" id="information">
+      <section class="info section section-hidden" id="information">
         <!-- Information heading -->
         <h2 class="heading-secondary">Why you should book with us</h2>
         <!-- Information main content -->
@@ -122,7 +128,7 @@
       </section>
 
       <!-- Tours/Destinations -->
-      <section class="tours section" id="destinations">
+      <section class="tours section section-hidden" id="destinations">
         <!-- Tours/Destinations heading -->
         <h2 class="heading-secondary">Our most popular trips</h2>
         <!-- Top tours container -->
@@ -197,7 +203,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="testimonials section" id="testimonials">
+      <section class="testimonials section section-hidden" id="testimonials">
         <!-- Testimonials heading -->
         <h2 class="heading-secondary">See what people are saying</h2>
 
@@ -271,7 +277,7 @@
       </section>
 
       <!-- Story section -->
-      <section class="story section">
+      <section class="story section section-hidden">
         <!-- Story heading -->
         <h2 class="heading-secondary u-margin-bottom-md story__heading">
           Our story.
@@ -301,7 +307,7 @@
     <footer class="footer" id="footer">
       <!-- Footer navigation -->
       <div class="footer__nav">
-        <ul class="nav__links">
+        <ul class="nav__links nav__links-bottom">
           <a href="#home" class="nav__link nav__link-main">
             <li>Home</li>
           </a>
@@ -349,8 +355,8 @@
 
       <!-- Copyright -->
       <div class="footer__copyright">
-        Pillar 2021 &copy;. This is not a real website. It's current use is for
-        display on a portfolio.
+        <span class="footer__copyright-main">Pillar 2021 &copy;.</span> This is
+        not a real website. It's current use is for display on a portfolio.
       </div>
     </footer>
 
@@ -391,7 +397,5 @@
   </body>
 </html>
 
-<!-- 1. Make sections slide in when scrolled over with intersectionObserver -->
-<!-- 2. Build media queries to make fully responsive -->
 <!-- 3. Revise code -->
 <!-- 4. Finish app -->
