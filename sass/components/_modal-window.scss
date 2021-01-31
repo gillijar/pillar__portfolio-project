@@ -103,6 +103,10 @@
     width: 60%;
     object-fit: cover;
 
+    @media only screen and (max-width: 1100px) {
+      height: 120%;
+    }
+
     @include respond(tab-port) {
       display: none;
     }

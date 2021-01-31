@@ -15,9 +15,14 @@ const btnLeft = document.querySelector('.btn-left');
 
 const sections = document.querySelectorAll('.section');
 
+const nav = document.querySelector('.nav');
 const navBtn = document.querySelectorAll('.nav__btn');
 const navContainer = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__link-main');
+
+const toursSection = document.querySelector('.tours');
+const infoSection = document.querySelector('.info');
+const scrollTopBtn = document.querySelector('.scroll-top');
 
 // Header button to scroll to main content
 headerBtn.addEventListener('click', function () {
@@ -131,4 +136,42 @@ navLinks.forEach((link) => {
     });
     navContainer.classList.remove('nav-open');
   });
+});
+
+//////////////////////////////////
+// Scroll to top button appear
+const scrollTopAppear = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (entry.isIntersecting) {
+    scrollTopBtn.classList.remove('scroll-top__hidden');
+  }
+};
+
+const scrollTopToursObserver = new IntersectionObserver(scrollTopAppear, {
+  root: null,
+  threshold: 0.35,
+});
+
+scrollTopToursObserver.observe(toursSection);
+
+// Scroll to top button disappear
+const scrollTopRemove = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (entry.isIntersecting) {
+    scrollTopBtn.classList.add('scroll-top__hidden');
+  }
+};
+
+const scrollTopInfoObserver = new IntersectionObserver(scrollTopRemove, {
+  root: null,
+  threshold: 0.15,
+});
+
+scrollTopInfoObserver.observe(infoSection);
+
+// Button click event
+scrollTopBtn.addEventListener('click', () => {
+  nav.scrollIntoView({ behavior: 'smooth' });
 });

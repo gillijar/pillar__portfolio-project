@@ -82,3 +82,35 @@
   left: 10px;
   transform: translate(10px, -50%);
 }
+
+// Scroll to top button
+.scroll-top {
+  border: none;
+  outline: none;
+  background-color: rgba($color-grey-light-2, 0.75);
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transition: all 0.5s;
+
+  @include respond(phone) {
+    right: 1.5rem;
+  }
+
+  &__btn {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-black;
+  }
+
+  &__hidden {
+    opacity: 0;
+  }
+}

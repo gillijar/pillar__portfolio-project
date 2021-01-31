@@ -10,7 +10,8 @@
   }
 
   &__phone-btn-container {
-    height: 3.2rem;
+    height: 3rem;
+    cursor: pointer;
   }
 
   &__phone-btn {
@@ -19,7 +20,7 @@
     @include respond(tab-port) {
       display: inline-block;
       height: 0.3rem;
-      width: 4rem;
+      width: 3rem;
       background-color: $color-tertiary;
       position: relative;
 
@@ -28,7 +29,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        transform: translateY(-1.3rem);
+        transform: translateY(-1.1rem);
         background-color: $color-tertiary;
       }
 
@@ -37,7 +38,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        transform: translateY(1.3rem);
+        transform: translateY(1.1rem);
         background-color: $color-tertiary;
       }
     }
@@ -53,7 +54,7 @@
     }
 
     @include respond(phone) {
-      width: 45%;
+      width: 37.5%;
     }
   }
 
@@ -65,6 +66,7 @@
 
     &-close {
       display: none;
+      cursor: pointer;
 
       @include respond(tab-port) {
         display: inline-block;
@@ -72,8 +74,8 @@
         top: 1.5rem;
         left: 1.5rem;
         fill: $color-white;
-        height: 6.5rem;
-        width: 6.5rem;
+        height: 4.5rem;
+        width: 4.5rem;
       }
     }
 
