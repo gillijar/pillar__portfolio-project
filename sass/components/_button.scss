@@ -100,6 +100,13 @@
   right: 2rem;
   transition: all 0.5s;
 
+  @include respond(tab-port) {
+    .hidden__sm-device {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
   @include respond(phone) {
     right: 1.5rem;
   }
@@ -112,5 +119,6 @@
 
   &__hidden {
     opacity: 0;
+    pointer-events: none;
   }
 }

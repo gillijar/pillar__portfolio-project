@@ -142,7 +142,6 @@ navLinks.forEach((link) => {
 // Scroll to top button appear
 const scrollTopAppear = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (entry.isIntersecting) {
     scrollTopBtn.classList.remove('scroll-top__hidden');
   }
@@ -158,7 +157,6 @@ scrollTopToursObserver.observe(toursSection);
 // Scroll to top button disappear
 const scrollTopRemove = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (entry.isIntersecting) {
     scrollTopBtn.classList.add('scroll-top__hidden');
   }
@@ -173,5 +171,6 @@ scrollTopInfoObserver.observe(infoSection);
 
 // Button click event
 scrollTopBtn.addEventListener('click', () => {
+  scrollTopBtn.classList.add('scroll-top__hidden');
   nav.scrollIntoView({ behavior: 'smooth' });
 });
