@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <!-- Fav Icon -->
     <link rel="shortcut icon" type="img/png" href="/img/icon.png" />
     <!-- Stylesheet -->
@@ -329,7 +330,7 @@
       <!-- Contact area -->
       <div class="footer__contact">
         <div class="footer__address">
-          <svg class="footer__icon">
+          <svg class="footer__icon footer__icon-location">
             <use xlink:href="img/sprite.svg#icon-location-pin"></use>
           </svg>
           555 Random St <br />
@@ -342,7 +343,9 @@
             <svg class="footer__icon">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
-            <p class="phone-number">(555)-111-1234</p>
+            <a href="tel:+(555)-111-1234" class="phone-number"
+              >(555)-111-1234</a
+            >
           </div>
           <div class="footer__email">
             <svg class="footer__icon">
@@ -364,6 +367,7 @@
     <div class="modal">
       <div class="modal__overlay"></div>
       <div class="modal__window">
+        <!-- Close modal button -->
         <svg class="modal__close--btn">
           <use xlink:href="img/sprite.svg#icon-cross"></use>
         </svg>
@@ -388,7 +392,7 @@
           <!-- Form button -->
           <button class="btn btn-primary u-margin-top-md">Step 2 &rarr;</button>
         </form>
-        <img src="/img/modal-bkg.jpeg" alt="modal img" class="modal__img" />
+        <div class="modal__window-img"></div>
       </div>
     </div>
 
