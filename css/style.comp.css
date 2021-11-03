@@ -679,21 +679,23 @@ body {
   padding: 5rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   .tours__container {
-    max-width: inherit;
+    width: 85%;
     padding: 8rem 3rem;
     display: flex;
     justify-content: space-around;
     overflow: hidden; }
     @media only screen and (max-width: 56.25em) {
       .tours__container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4rem 3rem; } }
   .tours__card {
-    width: 25%;
+    width: 30%;
     height: 100%;
     text-align: center;
     display: flex;
@@ -701,7 +703,8 @@ body {
     align-items: stretch;
     position: relative;
     transition: all 0.3s;
-    box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25); }
+    box-shadow: 0 2.5rem 5rem rgba(31, 31, 31, 0.25);
+    border-radius: 3px; }
     @media only screen and (max-width: 56.25em) {
       .tours__card {
         width: 50%; }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "pillar main page",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^10.2.3",
     "live-server": "^1.2.1",
